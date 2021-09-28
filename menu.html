@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .menu-control{
+            position: relative;
+            margin: 300px !important;
+            width: 45px;
+            border: 1px solid transparent;
+            position: relative;
+            height: 45px;
+            transform: translateY(50px);
+        }
+        .menu{
+            width: 30px;
+            height: 3px;
+
+            background-color: black;
+            display: inline-block;
+            transition: 1s ease;
+            position: relative;
+        }
+        .menu-control .st{
+            margin-top: 7px;
+
+        }
+        .menu-control .nd{
+
+        }
+        .menu-control .rd{
+            margin-bottom: 7px;
+        }
+        .st1{
+            transform: translateY(7px) rotate(45deg);
+        }
+        .nd2{
+              display: none;
+          }
+       .rd3{
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+                <div class="m-5 menu-control d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="menu st"></div>
+                    <div class="menu nd"></div>
+                    <div class="menu rd"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--=======================svg=====================-->
+<!--    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path fill="#6E57E0" d="M31.9,15.8C20.7,37.9,-23.3,38.4,-34.1,16.5C-44.9,-5.3,-22.5,-49.5,-0.4,-49.7C21.6,-50,43.1,-6.3,31.9,15.8Z" transform="translate(100 100)" />-->
+<!--    </svg>-->
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $('.menu-control').click(function () {
+       $(this).find('.st').toggleClass('st1');
+       $(this).find('.nd').toggleClass('nd2');
+       $(this).find('.rd').toggleClass('rd3');
+    })
+</script>
+</html>
